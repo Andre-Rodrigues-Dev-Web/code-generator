@@ -1,9 +1,10 @@
 //vars breakpoits
 $desktop: 48em;
 //vars colors
-$lightBlue: #3498db;
 $darkBlue: #2980b9;
+$lightBlue: #3498db;
 $lightYellow: #f1c40f;
+$orange: #ff5722;
 //vars fonts
 $archivo: "Archivo Black", sans-serif;
 $bebas: "Bebas Neue", sans-serif;
@@ -78,6 +79,7 @@ $raleway: "Raleway", sans-serif;
   @for $i from 1 through 36 {
     .col-#{$i} {
       @include column-width($i);
+      padding: 0.35em;
     }
   }
 }
@@ -85,6 +87,7 @@ $raleway: "Raleway", sans-serif;
 .row {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   @media (width >= $desktop) {
     flex-direction: row;
   }
@@ -141,7 +144,13 @@ $raleway: "Raleway", sans-serif;
       &-brands {
         font-size: 2.5em;
         &.fa-html5{
-            color: orange;
+            color: $orange;
+        }
+        &.fa-css3-alt{
+            color: $lightBlue;
+        }
+        &.fa-js{
+            color: $lightYellow;
         }
       }
     }
